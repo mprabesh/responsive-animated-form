@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
+PORT = process.env.PORT ? process.env.PORT : 8080;
+
 app.use(express.static("assets"));
 
-app.listen(3001, () => {
-  console.log("Listening to port 3001");
+app.listen(PORT, () => {
+  console.log("Listening to port", PORT);
 });
